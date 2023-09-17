@@ -4,5 +4,29 @@
 @url = http://{{host}}
 
 # @name get-prompts
-
 GET {{url}}/prompts
+
+###
+
+# @name upload
+POST {{url}}/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="example.mp3"
+Content-Type: image/png
+
+< ./example.mp3
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+# @name create-transcription
+POST {{url}}/videos/dbb83567-88cf-443a-92be-a50b713804db/transcription
+Content-Type: application/json
+
+{
+  "prompt": "news, amazon, plane crash"
+}
+
+
+
