@@ -3,7 +3,7 @@ import { prisma } from "../lib/prisma";
 
 
 export async function getAllPromptsRoute(app: FastifyInstance) {
-  app.get('/prompt', async () => {
+  app.get('/prompts', async () => {
     const prompts = await prisma.prompt.findMany();
     return prompts;
   })
