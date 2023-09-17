@@ -1,0 +1,8 @@
+@hostname = localhost
+@port = 3333
+@host = {{hostname}}:{{port}}
+@url = http://{{host}}
+
+# @name get-prompts
+
+GET {{url}}/prompts
