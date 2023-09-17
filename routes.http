@@ -38,6 +38,6 @@ Content-Type: application/json
 {
   "videoId": "dbb83567-88cf-443a-92be-a50b713804db",
   "temperature": 0.5,
-  "template": "Generate a simple resume from the following transcription: '''{transcription}'''"
+  "prompt": "Generate a simple resume from the following transcription: '''{transcription}'''"
 }
 
