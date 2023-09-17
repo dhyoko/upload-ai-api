@@ -16,7 +16,7 @@ export async function uploadVideoRoute(app: FastifyInstance) {
     }
   })
 
-  app.post('/video', async (req, reply) => {
+  app.post('/videos', async (req, reply) => {
     const data = await req.file();
 
     if(!data) {
